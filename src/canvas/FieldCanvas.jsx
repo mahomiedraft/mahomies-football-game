@@ -1,4 +1,3 @@
-// src/canvas/FieldCanvas.jsx
 import { useEffect, useRef } from "react";
 import { drawStadium } from "./drawField";
 
@@ -8,8 +7,8 @@ export default function FieldCanvas({ state }) {
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    const ctx = canvas.getContext("2d");
 
+    const ctx = canvas.getContext("2d");
     const user = state?.teams?.USER;
     const npc = state?.teams?.NPC;
 
@@ -41,4 +40,3 @@ export default function FieldCanvas({ state }) {
     </div>
   );
 }
-
