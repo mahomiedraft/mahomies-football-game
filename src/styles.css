@@ -1,3 +1,4 @@
+/* src/styles.css */
 :root {
   color-scheme: dark;
 }
@@ -6,7 +7,7 @@ body {
   margin: 0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
   background: #070a12;
-  color: rgba(255,255,255,0.92);
+  color: rgba(255, 255, 255, 0.92);
 }
 
 .app {
@@ -37,5 +38,70 @@ body {
 .main {
   width: 100%;
   max-width: 980px;
+  display: grid;
+  gap: 16px;
 }
 
+/* Dice UI */
+.dice-panel {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.04);
+  width: 100%;
+  max-width: 520px;
+}
+
+.dice-panel h3 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+}
+
+.dice-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.dice-row label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+}
+
+.dice-row input {
+  width: 90px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: #020617;
+  color: white;
+  outline: none;
+}
+
+.dice-row input:focus {
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  background: #c8102e;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.92;
+}
+
+.error {
+  margin-top: 6px;
+  color: #f87171;
+  font-size: 13px;
+}
