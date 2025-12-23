@@ -1,6 +1,4 @@
-// src/App.jsx
 import { useMemo, useState } from "react";
-import "./styles.css";
 import FieldCanvas from "./canvas/FieldCanvas";
 import DiceInput from "./components/DiceInput";
 import { createInitialState } from "./engine/state";
@@ -13,7 +11,7 @@ export default function App() {
   function handleResolve(dice, helpers) {
     const { newState, events } = resolvePlay(state, dice);
 
-    // If engine requests chaos roll, pause here
+    // If engine requests chaos roll, pause here and prompt for D20
     if (events.some((e) => e.type === "CHAOS_REQUIRED")) {
       helpers.setNeedsChaos(true);
       return;
@@ -26,7 +24,7 @@ export default function App() {
   return (
     <div className="app">
       <header className="header">
-        <h1>Mahomies Football Game</h1>
+        <h1>Mahomies Dice Football</h1>
         <p>Chefs vs NPC — Dice decide everything.</p>
       </header>
 
